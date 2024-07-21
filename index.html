@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bahaa Mezher</title>
+    <title>Bahaa eldine Mezher</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.2/build/spline-viewer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
+
 <body>
     <header>
         <nav class="nav-bar">
@@ -28,23 +32,67 @@
             <div class="left-side">
                 <h1>Bahaa.c || The Ultimate Dev</h1>
                 <p class="p">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, nobis perspiciatis beatae repellat eveniet, dicta maiores veniam consequatur similique incidunt distinctio totam sunt, doloribus aspernatur qui blanditiis. Officia, cupiditate iste.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, nobis perspiciatis beatae
+                    repellat eveniet, dicta maiores veniam consequatur similique incidunt distinctio totam sunt,
+                    doloribus aspernatur qui blanditiis. Officia, cupiditate iste.
                 </p>
                 <button>Github</button>
             </div>
             <div class="right-side">
                 <!-- Spline Viewer -->
-                <spline-viewer url="https://prod.spline.design/nhclHGI6bs-cCZng/scene.splinecode" class="macbook"></spline-viewer>
+                <spline-viewer url="https://prod.spline.design/nhclHGI6bs-cCZng/scene.splinecode"
+                    class="macbook"></spline-viewer>
                 <p>Try playing with it! zoom in, zoom out, Rotate</p>
             </div>
         </div>
     </section>
     <br><br><br>
     <section class="section-two">
-        <div class="container">
-
+        <h1>My Services</h1>
+        <div class="content">
+            <div class="card">
+                <div class="copywriting">
+                    <div class="icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="info">
+                        <h2>Copywriting</h2>
+                        <p>Learning copywriting at the moment </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="copywriting">
+                    <div class="icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="info">
+                        <h2>Web-dev</h2>
+                        <p>Pro-efficient in web development </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card with-br">
+                <div class="copywriting">
+                    <div class="icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="info">
+                        <h2>Java</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bouncing-ball">
+                <svg viewBox="0 0 100 200">
+                    <ellipse class="shadow" cx="50" cy="188" rx="15" ry="5" />
+                    <circle class="ball" cx="50" cy="22" r="15" />
+                </svg>
+            </div>
         </div>
     </section>
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
 </body>
+
 </html>
