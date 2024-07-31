@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 @font-face {
     font-family: bm;
     src: url(./font/BlackMango-Black.otf);
@@ -63,6 +68,28 @@ a {
     display: block;
     transition: 0.3s ease;
 }
+
+.menu-items li a {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-items li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #1488CC;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.menu-items li a:hover::after {
+    transform: translateX(0);
+}
+
 
 a:hover {
     text-decoration: underline;
@@ -139,35 +166,42 @@ button:hover {
 
 .section-two {
     background-color: white;
-    height: calc(100vh - 85px);
+    padding: 3rem 1.5rem;
+    min-height: 100vh;
+    position: relative;
 }
+
 
 .section-two h1 {
     color: black;
     text-align: center;
-    padding-top: 15vh;
+    padding-top: 3rem;
 }
 
 .content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding-left: 9vw;
+    padding: 0;
+    position: relative; /* Ensures the bouncing ball can be positioned relative to this container */
 }
 
 .card {
     color: black;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 10px;
-    width: 18em;
-    padding: 30px;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
     transition: 0.7s ease;
-    margin: 15px;
+    margin: 10px;
+    box-sizing: border-box;
 }
 
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     cursor: pointer;
 }
 
@@ -185,28 +219,366 @@ button:hover {
 }
 
 .bouncing-ball {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    order: 3; 
-    width: 10vw;
-    max-height: 80vh;
-    max-width: 100px;
+    position: absolute;
+    bottom: 0; /* Position it at the bottom of the section */
+    right: 0; /* Position it at the right edge of the section */
+    margin-right: 1rem;
+    width: 15vw;
+    max-width: 150px;
+    height: auto;
+    z-index: 1; /* Ensure it stays above other content */
 }
 
 svg {
     width: 100%;
     height: auto;
-    opacity: 1;
-    z-index: 999;
 }
 
-circle {
+.circle {
     fill: #88ce02;
 }
+
 
 .shadow {
     fill: #aaa;
     transform-origin: center;
 }
 
+.right-part-2{
+    display: flex;
+    flex-direction: end;
+}
+
+.section-three {
+    display: flex;
+    align-items: center;
+    height: 110vh;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+.section-three h1{
+   align-items: center;
+}
+.right-side-2{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    right: 5%;
+}
+.left-side-2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 8%;
+    width: 800px;
+    
+}
+.project_card{
+    min-height: 14em;
+    padding: 10px;
+    width: 15em;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+.project_card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.project_card img{
+    width: 8em;
+    border-radius: 10px;
+    box-shadow: rgba(188, 49, 231, 0.35) 0px 5px 15px;
+    margin-bottom: 20px;
+}
+#projects{
+    text-align: center;
+}
+
+.contact img{
+    width: 8em;
+    border-radius: 10px;
+    box-shadow: rgba(188, 49, 231, 0.35) 0px 5px 15px;
+    margin-bottom: 20px;
+    margin-left: 6vw;
+}
+
+.section-quatre{
+    color: black;
+    background-color: white;
+    padding: 7vw;
+    justify-content: center;
+    
+}
+
+.section-quatre h1{
+    color: black;
+    text-align: center;
+}
+
+.contact{
+    text-align: center;
+    width: 300px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.mail{
+    text-align: center;
+    width: 300px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.mail img{
+    width: 8em;
+    border-radius: 10px;
+    box-shadow: rgba(188, 49, 231, 0.35) 0px 5px 15px;
+    margin-bottom: 20px;
+    margin-left: 6vw;
+}
+
+.container-2 {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+#logo{
+    display: none;
+}
+
+footer {
+    background-color: #080024;
+    padding: 1rem 0;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-content a {
+    color: #1488CC;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1488CC;
+}
+
+/* Base Styles (Already provided) */
+
+/* Responsive Design Adjustments */
+@media (max-width: 1200px) {
+    .nav-bar {
+        padding: 1rem 2rem;
+        font-size: 16px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .section-one {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .section-two {
+        padding: 2rem 1rem;
+    }
+
+    .content {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .section-three {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .left-side-2,
+    .right-side-2 {
+        width: 100%;
+        position: static;
+    }
+
+    .project_card {
+        width: calc(50% - 20px);
+        margin: 10px;
+    }
+
+    .contact,
+    .mail {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .container-2 {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .section-one {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .macbook {
+        height: 40vh;
+    }
+
+    .section-two h1 {
+        font-size: 24px;
+    }
+
+    .content {
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .bouncing-ball {
+        width: 25vw;
+        max-width: 100px;
+        position: static; /* Remove absolute positioning */
+        margin: 1rem auto; /* Center it and give space around */
+    }
+
+    .section-three {
+        padding: 2rem 1rem;
+    }
+
+    .left-side-2,
+    .right-side-2 {
+        width: 100%;
+        position: static;
+    }
+
+    .project_card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .contact img,
+    .mail img {
+        width: 100px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        padding: 1rem;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .menu-items {
+        gap: 0.5rem;
+    }
+
+    .section-one h1 {
+        font-size: 32px;
+    }
+
+    .section-one p {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 0.5rem 1rem;
+        font-size: 14px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .bouncing-ball {
+        width: 35vw;
+        max-width: 80px;
+    }
+
+    .section-three h1 {
+        font-size: 24px;
+    }
+
+    .project_card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .contact img,
+    .mail img {
+        width: 80px;
+        margin-left: 0;
+    }
+}
+
+footer {
+    padding: 1rem;
+}
+
+.footer-content {
+    font-size: 12px;
+}
+
+.social-icons a {
+    font-size: 16px;
+}
