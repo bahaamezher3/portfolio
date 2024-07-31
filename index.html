@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.2/build/spline-viewer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -19,15 +20,15 @@
                 <div>Bahaa</div>
             </div>
             <ul class="menu-items">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <br><br><br>
-    <section class="section-one">
+    <br><br>
+    <section class="section-one" id="About">
         <div class="container">
             <div class="left-side">
                 <h1>Bahaa.c || The Ultimate Dev</h1>
@@ -36,7 +37,7 @@
                     repellat eveniet, dicta maiores veniam consequatur similique incidunt distinctio totam sunt,
                     doloribus aspernatur qui blanditiis. Officia, cupiditate iste.
                 </p>
-                <button>Github</button>
+                <a href="https://github.com/bahaamezher3"><button>Github</button></a>
             </div>
             <div class="right-side">
                 <!-- Spline Viewer -->
@@ -47,7 +48,7 @@
         </div>
     </section>
     <br><br><br>
-    <section class="section-two">
+    <section class="section-two" id="Services">
         <h1>My Services</h1>
         <div class="content">
             <div class="card">
@@ -79,7 +80,7 @@
                     </div>
                     <div class="info">
                         <h2>Java</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <p>Lorem ipsum dolor sit amet conse</p>
                     </div>
                 </div>
             </div>
@@ -91,8 +92,79 @@
             </div>
         </div>
     </section>
+    <br>
+    <h1 id="projects">My Projects</h1>
+    <br>
+    <section class="section-three" id="Projects">
+
+        <div class="container">
+
+            <div class="left-side-2">
+
+                <div class="project_card">
+                    <img src="img/5597096_56376.jpg"
+                        alt="">
+                    <h3>Facial Recognition</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="project_card">
+                    <img src="img/rest_logo.png"
+                        alt="">
+                    <h3>Restaurant Web</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="project_card">
+                    <img src="img/Book_logo.png"
+                        alt="">
+                    <h3>Bookstore web</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="project_card">
+                    <img src="img/clinic.png"
+                        alt="">
+                    <h3>Clinic System</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            <div class="right-side-2">
+                <!-- Spline Viewer -->
+                <spline-viewer url="https://prod.spline.design/v-DDcgQU5Vr92fx2/scene.splinecode"
+                    class="BMO"></spline-viewer>
+                <p>BMO!</p>
+            </div>
+        </div>
+    </section>
+    <section class="section-quatre" id="Contact">
+        <h1>Let's Work Together</h1>
+        <div class="container-2">
+            <div class="contact">
+                <spline-viewer url="https://prod.spline.design/4DDvaMELJPfYGD0Z/scene.splinecode"></spline-viewer>
+                <B>Phone</B>
+                <p>+961 81 659 596</p>
+            </div>
+            <div class="mail">
+                <spline-viewer url="https://prod.spline.design/9VtmzVmBp0U2jNEn/scene.splinecode"></spline-viewer>
+                <B>Mail</B>
+                <p>bahaa.mezher.3@gmail.com</p>
+            </div>
+        </div>
+        <br><br>
+    </section>
+    <footer>
+
+    </footer>
     <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
 </body>
-
+<footer>
+    <div class="footer-content">
+        <p>Copyrights © <a href="https://www.linkedin.com/in/islam-mahfouz" target="_blank">Bahaa eldine Mezher</a></p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/bahaa-mezher"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/islammahfouz" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/bahaa.mezher.0" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCIslamMahfouz" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
 </html>
